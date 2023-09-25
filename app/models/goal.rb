@@ -1,4 +1,4 @@
 class Goal < ApplicationRecord
   belongs_to :user
-  belongs_to :wish
+  belongs_to :wishlist, class_name: 'Wishlist'
 end

@@ -30,8 +30,9 @@
         </li>
         
 <li class="nav-item">
-  <a class="nav-link <%= 'active' if current_page?(goals_path) %>" href="<%= goals_path %>">Goals</a>
+  <%= link_to "Goals", goals_path, class: "nav-link #{'active' if controller_name == 'goals' && action_name == 'index'}" %>
 </li>
+
 
 
       </ul>

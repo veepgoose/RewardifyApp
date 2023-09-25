@@ -1,2 +1,25 @@
+<% if flash[:notice] %>
+  <div class="alert alert-success">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+
 <h1>GOALS</h1>
 <p>Turn your wishes into Goals, and your Goals into Rewards! Yayy</p>
+
+<h2>Add a New Goal</h2>
+<%= search_form_for @q, url: goals_path, method: :get do |f| %>
+  <%= f.label :name_cont, "Search Wishlist Items:" %>
+  <%= f.text_field :name_cont %>
+  <%= f.submit "Search" %>
+<% end %>
+
+<h2>Wishlist Items</h2>
+<ul>
+  <% @wishlist_items.each do |item| %>
+    <li>
+      <%= link_to item.name, new_goal_path(wishlist_item_id: item.id) %>
+    </li>
+  <% end %>
+</ul>
+

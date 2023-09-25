@@ -3,6 +3,15 @@
   <div class="col-lg-6 mx-auto">
     <p class="lead mb-4">Welcome to Rewardify!</p>
     
+    <h2>Your Current Goal:</h2>
+    <div id="goal-container"> 
+      <% if current_user.current_goal %>
+        <p>Goal Name: <%= current_user.current_goal.wishlist.name %></p>
+        <p>Description: <%= current_user.current_goal.wishlist.description %></p>
+        <img src="<%= current_user.current_goal.wishlist.picture.url %>" alt="Wishlist Image">
+      <% else %>
+        <p>No current goal set. Create a new goal to get started!</p>
+      <% end %>
+    </div>
   </div>
-
 </div>

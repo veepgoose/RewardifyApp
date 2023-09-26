@@ -1,15 +1,132 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+.btn-primary {
+    background-color: #FFA600;
+    border-color: #FFA600;
+}
+
+.btn-primary:hover {
+    background-color: #D7FF4F;
+    border-color: #D7FF4F;
+}
+
+.btn-outline-secondary {
+    background-color: #D7FF4F;
+    border-color: #D7FF4F;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #FFA600;
+    border-color: #FFA600;
+}
+
+.btn-danger {
+    background-color: #F736D2;
+    border-color: #F736D2;
+}
+
+.btn-danger:hover {
+    background-color: #8075F8;
+    border-color: #8075F8;
+}
+
+.bg-primary {
+    background-color: #3B9FFF;
+}
+
+/* Change the background color of the Bootstrap navbar */
+.navbar.bg-primary {
+    background-color: #3B9FFF !important;
+}
+
+/*Navbar Links*/
+.navbar-link {
+    color: #D7FF4F !important;
+}
+
+/*Logged In as Text*/
+.navbar-text.float-right {
+    color: #FFFFFF !important;
+}
+
+
+
+body {
+    background-color: #3B9FFF; 
+    color: #D7FF4F;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    color: #FFFFFF;
+}
+
+p {
+    color: #3B9FFF;
+}
+
+a {
+    color: #FFA600;
+}
+/*Wishlist Items*/
+.list-group-item {
+    background-color: #F9F9F9;
+} */
+
+ .list-group-item-action:hover {
+    background-color: #D7FF4F;
+}
+
+/* Image thumbnail */
+.img-thumbnail {
+    background-color: #D7FF4F;
+    border:#D7FF4F;
+}
+
+/* Box for Wish View */
+.d-flex {
+    background-color: #F9F9F9;
+    border-radius: 10px;
+    padding: 10px;
+   
+}
+
+.d-flex:hover {
+    background-color: #D7FF4F;
+    padding: 10px;
+}
+/*Wish Header Text*/
+div.d-flex.flex-column.gap-2 h1 {
+   
+    color: #3B9FFF;
+}
+/*Last updated text*/
+div.d-flex.flex-column.gap-2 small  {
+    color: #FFA600;
+}
+/*Wishlist box*/
+div.d-flex.flex-column.gap-2:hover {
+    background-color: #D7FF4F;
+    padding: 10px;
+}
+
+div.list-group-item-action:hover {
+    background-color: #D7FF4F;
+}
+/*Wishlist box outline*/
+div.list-group-item.list-group-item-action:hover {
+    background-color: #D7FF4F;
+}
+
+/*Wishlist Button Box*/
+div.d-flex.gap-3.py-3  {
+    background-color: #3B9FFF;
+    border-color: #3B9FFF;
+}
+
+#wishlist-3 div.d-flex.gap-3.py-3  {
+    background-color: #F9F9F9;
+    border-color: #D7FF4F;
+}
+
+div.wish-link {
+    color: #FFFFFF;
+}

@@ -12,21 +12,21 @@
   <% end %>
 
   <div>
-    <%= form.label :name, style: "display: block" %>
+    <%= form.label :name, "Wish", style: "display: block" %>
     <%= form.text_field :name %>
   </div>
 
   <div>
-    <%= form.label :description, style: "display: block" %>
+    <%= form.label :description, "Link to Wish", style: "display: block" %>
     <%= form.text_area :description %>
   </div>
 
   <div>
-    <%= form.label :picture, style: "display: block" %>
+    <%= form.label :picture,  style: "display: block" %>
     <%= form.file_field :picture %>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit "Add Wish", class: "btn btn-primary" %>
   </div>
 <% end %>

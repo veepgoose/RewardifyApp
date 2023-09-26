@@ -22,7 +22,8 @@ class WishlistsController < ApplicationController
   # POST /wishlists or /wishlists.json
   def create
     @wishlist = Wishlist.new(wishlist_params)
-
+    @wishlist.user_id = current_user.id
+  
     respond_to do |format|
       if @wishlist.save
         format.html { redirect_to wishlist_url(@wishlist), notice: "Wishlist was successfully created." }
@@ -33,6 +34,7 @@ class WishlistsController < ApplicationController
       end
     end
   end
+  
 
   # PATCH/PUT /wishlists/1 or /wishlists/1.json
   def update

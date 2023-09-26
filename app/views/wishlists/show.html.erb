@@ -6,12 +6,13 @@
     <h1><%= @wishlist.name %></h1>
     <p><%= @wishlist.description %></p>
     <small class="opacity-50 text-nowrap">Last updated <%= time_ago_in_words @wishlist.updated_at %></small>
+    <%= image_tag(@wishlist.picture_url, width: 300, height: 300, class: "img-thumbnail flex-shrink-0") if @wishlist.picture? %>
   </div>
-  <%= image_tag(@wishlist.picture_url, width: 150, height: 150, class: "img-thumbnail flex-shrink-0") if @wishlist.picture? %>
+ <%# <%= image_tag(@wishlist.picture_url, width: 150, height: 150, class: "img-thumbnail flex-shrink-0") if @wishlist.picture? %> 
 </div>
 
 <div class="d-flex gap-3 py-3">
-  <%= link_to "Edit this wishlist", edit_wishlist_path(@wishlist), class: "btn btn-primary" %>
-  <%= link_to "Back to wishlists", wishlists_path, class: "btn btn-outline-secondary" %>
-  <%= button_to "Destroy this wishlist", @wishlist, method: :delete, class: "btn btn-danger", form: { data: { turbo_confirm: "Are you sure?" } } %>
+  <%= link_to "Edit Wish", edit_wishlist_path(@wishlist), class: "btn btn-primary" %>
+  <%= link_to "Back to Wishes", wishlists_path, class: "btn btn-outline-secondary" %>
+  <%= button_to "Delete Wish", @wishlist, method: :delete, class: "btn btn-danger", form: { data: { turbo_confirm: "Are you sure?" } } %>
 </div>

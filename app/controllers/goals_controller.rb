@@ -10,28 +10,30 @@ class GoalsController < ApplicationController
 
   def new
     @goal = Goal.new
-    @wishlist_item = Wishlist.find(params[:wishlist_item_id]) if params[:wishlist_item_id]
     @user_wishes = current_user.wishes
+    # Optionally, you can set @wishlist_item based on a specific user's wishlist item
+    if params[:wishlist_item_id]
+      @wishlist_item = current_user.wishes.find(params[:wishlist_item_id]).wishlist
+    end
   end
+  
   
 
   def create
     @goal = Goal.new(goal_params)
+    
     if @goal.save
-      respond_to do |format|
-        format.turbo_stream do
-          render turbo_stream: turbo_stream.append(
-            "goal-container", # Replace with the actual DOM element ID
-            partial: "goals/goal",
-            locals: { goal: @goal }
-          )
-        end
-        format.html { redirect_to dashboard_path, notice: "Goal created successfully" }
+      # Check if the goal is valid and has an id
+      if @goal.valid?
+        render turbo_stream: turbo_stream.append("goal_form", @goal), status: :created
+      else
+        render turbo_stream: turbo_stream.replace("goal_form", partial: "goals/form", locals: { goal: @goal }), status: :unprocessable_entity
       end
     else
-      render :new
+      render turbo_stream: turbo_stream.replace("goal_form", partial: "goals/form", locals: { goal: @goal }), status: :unprocessable_entity
     end
   end
+  
   
 
   private

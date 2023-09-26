@@ -1,5 +1,6 @@
 <h1>Create a New Goal</h1>
 
+<%= turbo_frame_tag "goal_form" do %>
 <%= form_with(model: @goal, url: goals_path) do |form| %>
   <div class="form-group">
     <%= form.label :wish_id, "Select a Wish" %>
@@ -22,4 +23,5 @@
   </div>
 
   <%= form.submit "Create Goal", class: "btn btn-primary" %>
+<% end %>
 <% end %>

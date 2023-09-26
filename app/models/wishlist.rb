@@ -1,6 +1,8 @@
 class Wishlist < ApplicationRecord
     mount_uploader :picture, PictureUploader
-  
+
+    belongs_to :user
+
     def self.ransackable_attributes(auth_object = nil)
       %w[name] # List of searchable attributes
     end

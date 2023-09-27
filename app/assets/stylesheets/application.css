@@ -151,3 +151,7 @@ h2.goal-wishes {
     width: 100px;
     height: auto;
 }
+
+.display-5.fw-bold {
+    color: #D7FF4F !important;
+}

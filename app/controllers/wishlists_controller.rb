@@ -54,7 +54,7 @@ class WishlistsController < ApplicationController
     @wishlist.destroy
 
     respond_to do |format|
-      format.html { redirect_to wishlists_url, notice: "Wishlist was successfully destroyed." }
+      format.html { redirect_to wishlists_url, notice: "Fuck your wishes, we all die alone." }
       format.json { head :no_content }
     end
   end

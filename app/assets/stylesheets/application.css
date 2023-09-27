@@ -64,7 +64,7 @@ p {
 }
 
 a {
-    color: #FFA600;
+    color: #D7FF4F;
 }
 /*Wishlist Items*/
 .list-group-item {
@@ -96,7 +96,7 @@ a {
 /*Wish Header Text*/
 div.d-flex.flex-column.gap-2 h1 {
    
-    color: #3B9FFF;
+    color: #FFA600;
 }
 /*Last updated text*/
 div.d-flex.flex-column.gap-2 small  {
@@ -127,6 +127,20 @@ div.d-flex.gap-3.py-3  {
     border-color: #D7FF4F;
 }
 
-div.wish-link {
-    color: #FFFFFF;
+div.wish-link a {
+    color: #3B9FFF !important;
+}
+
+h2.wish-title a {
+    color: #FFA600 !important;
+}
+
+h2.goal-wishes {
+    color: #F9F9F9 !important;
+}
+
+.alert {
+    background-color: #FFA600;
+    border-color: #FFA600;
+    color: #F9F9F9;
 }

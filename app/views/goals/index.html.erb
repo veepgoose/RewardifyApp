@@ -11,10 +11,10 @@
 <%= search_form_for @q, url: goals_path, method: :get do |f| %>
   <%= f.label :name_cont, "Search Wishlist Items:" %>
   <%= f.text_field :name_cont %>
-  <%= f.submit "Search" %>
+  <%= f.submit "Search", class: "btn btn-primary"  %>
 <% end %>
 
-<h2>Wishlist Items</h2>
+<h2 class="goal-wishes">Wishes</h2>
 <ul>
   <% @wishlist_items.each do |item| %>
     <li>

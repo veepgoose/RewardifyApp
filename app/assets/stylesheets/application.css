@@ -144,3 +144,9 @@ h2.goal-wishes {
     border-color: #FFA600;
     color: #F9F9F9;
 }
+
+.logo {
+    display:block;
+    margin: 0 auto;
+    width: 100px;
+}
